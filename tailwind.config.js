@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
-        cursive: ['Inter', 'cursive'],
+        cursive: ['Lato', 'cursive'],
       },
     },
     screens: {

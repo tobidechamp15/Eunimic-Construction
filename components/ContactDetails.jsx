@@ -21,11 +21,11 @@ const ContactDetails = () => {
   return (
     <div className="font-[Helvetica]">
       <div
-        className={`flex flex-col md:flex-row md:justify-around border-b bg-[#f9f9f9] ${
-          inView ? 'xsm:block' : 'xsm:hidden'
-        }`}
+        className={`flex flex-col md:flex-row md:justify-around border-b bg-[#f9f9f9] transition-all duration-500 ease-in-out ${
+          inView ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+        } overflow-hidden`}
       >
-        <div className="flex gap-4 border-r border-l py-6 px-[40px] justify-center items-center xsm:border-b">
+        <div className="flex gap-4 border-r border-l py-6 px-[40px] justify-center items-center">
           <FontAwesomeIcon
             icon={faFacebook}
             className="text-[#c1c1c1] text-sm hover:text-[#d54900]"
@@ -39,7 +39,7 @@ const ContactDetails = () => {
             className="text-[#c1c1c1] text-sm hover:text-[#d54900]"
           />
         </div>
-        <div className="flex items-center justify-center gap-3 border-r border-l py-6 px-[40px] xsm:border-b text-center">
+        <div className="flex items-center justify-center gap-3 border-r border-l py-6 px-[40px] text-center">
           <FontAwesomeIcon
             icon={faClock}
             className="text-[#c1c1c1] text-sm hover:text-[#d54900]"
@@ -48,7 +48,7 @@ const ContactDetails = () => {
             Mon - Sat: 7:00 - 17:00
           </span>
         </div>
-        <div className="flex items-center justify-center gap-3 border-r border-l py-6 px-[40px] xsm:border-b text-center">
+        <div className="flex items-center justify-center gap-3 border-r border-l py-6 px-[40px] text-center">
           <span className="text-[#c1c1c1] text-sm hover:text-[#d54900]">
             <FontAwesomeIcon icon={faWhatsapp} /> +234-8060-933-719,{' '}
             <FontAwesomeIcon icon={faPhone} /> +234-8035-080-136
@@ -60,10 +60,12 @@ const ContactDetails = () => {
           </span>
         </div>
       </div>
-      <div className=" justify-center py-4  xsm:flex hidden">
+      <div className="justify-center py-4 flex">
         <FontAwesomeIcon
           icon={faArrowUp}
-          className="text-[#d54900] cursor-pointer "
+          className={`text-[#d54900] cursor-pointer transition-transform duration-500 ${
+            inView ? 'rotate-180' : ''
+          }`}
           onClick={handleInView}
         />
       </div>
