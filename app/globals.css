@@ -9,3 +9,12 @@
   background-image: url('http://anpsthemes.com/constructo-new-demos/1/wp-content/uploads/2014/11/tile3.jpg');
   background-size: cover;
 }
+
+.img-container {
+  width: 100%;
+  height: auto;
+}
+.img-container img {
+  height: 100%;
+  width: 100%;
+}
