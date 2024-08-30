@@ -13,7 +13,7 @@ const projectVariants = {
 };
 
 const Projects = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState('');
 
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -67,7 +67,7 @@ const Projects = () => {
     >
       <div className="bg-[#212121] text-white py-16">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-8">
+          <h2 className="text-3xl xsm:text-lg font-bold text-center mb-8">
             FEATURED WORKS
           </h2>
         </div>
