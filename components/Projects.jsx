@@ -30,7 +30,7 @@ const Projects = () => {
 
   const projects = [
     {
-      href: '.modern',
+      href: 'modern',
       src: modernImg,
       alt: 'Run-Ride project screenshot',
       name: 'Modern Building',
