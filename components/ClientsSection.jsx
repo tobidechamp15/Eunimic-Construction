@@ -4,7 +4,9 @@ import React from 'react';
 const ClientsSection = () => {
   return (
     <section className="py-16 text-center flex flex-col container">
-      <h2 className="text-3xl font-bold mb-12">CLIENTS THAT TRUST US</h2>
+      <h2 className="text-3xl xsm:text-lg font-bold mb-12">
+        CLIENTS THAT TRUST US
+      </h2>
 
       <div className="flex flex-wrap gap-2 justify-center items-center space-x-8 mb-12">
         <div className="build-pro-logo">BuildPro+</div>
