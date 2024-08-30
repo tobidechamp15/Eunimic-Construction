@@ -1,4 +1,6 @@
 import ContactDetails from '@/components/ContactDetails';
+import Copyright from '@/components/Copyright';
+import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
 import Projects from '@/components/Projects';
@@ -13,7 +15,8 @@ export default function Home() {
       <Hero />
       <Services />
       <Projects />
-      <h1>Eunimic Construction </h1>
+      <Footer />
+      <Copyright />
     </section>
   );
 }
