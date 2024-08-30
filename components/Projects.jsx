@@ -30,7 +30,7 @@ const Projects = () => {
 
   const projects = [
     {
-      href: 'https://run-ride.vercel.app/',
+      href: '.modern',
       src: modernImg,
       alt: 'Run-Ride project screenshot',
       name: 'Modern Building',
