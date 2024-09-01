@@ -55,7 +55,7 @@ const ModernBuilding = () => {
   return (
     <div>
       <Navbar />
-      <div className="bg-[#212121] text-white py-16 h-screen">
+      <div className="bg-[#2] text-[#212121] py-16 h-screen">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8">
             MODERN BUILDINGS
@@ -64,8 +64,8 @@ const ModernBuilding = () => {
             <button
               className={`px-4 py-2 mx-2 ${
                 activeTab === 'completed'
-                  ? 'bg-white text-black'
-                  : 'bg-gray-600'
+                  ? 'btn btn-secondary'
+                  : 'btn btn-secondary-outline'
               } rounded`}
               onClick={() => handleTabClick('completed')}
             >
@@ -73,7 +73,9 @@ const ModernBuilding = () => {
             </button>
             <button
               className={`px-4 py-2 mx-2 ${
-                activeTab === 'ongoing' ? 'bg-white text-black' : 'bg-gray-600'
+                activeTab === 'ongoing'
+                  ? 'btn btn-secondary'
+                  : 'btn btn-secondary-outline'
               } rounded`}
               onClick={() => handleTabClick('ongoing')}
             >
@@ -98,13 +100,13 @@ const ModernBuilding = () => {
 
           <div className="flex justify-between">
             <button
-              className="px-4 py-2 bg-gray-600 rounded"
+              className="px-4 py-2 btn btn-secondary rounded"
               onClick={handlePrevProject}
             >
               Previous
             </button>
             <button
-              className="px-4 py-2 bg-gray-600 rounded"
+              className="px-4 py-2 btn btn-success rounded"
               onClick={handleNextProject}
             >
               Next

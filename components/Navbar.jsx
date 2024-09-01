@@ -5,6 +5,7 @@ import logo from '../public/assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Sidebar from './Sidebar';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,7 @@ const Navbar = () => {
         <Image src={logo} className="w-[50px]" alt="Logo" />
       </div>
       <div className="hidden md:flex items-center gap-3 justify-center font-[Montserrat] font-semibold text-black text-sm">
-        <span>HOME</span>
+        <Link href="/">HOME</Link>
         <span>ABOUT</span>
         <span>CONTACT</span>
         <span>PROJECTS</span>

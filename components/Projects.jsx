@@ -77,7 +77,7 @@ const Projects = () => {
           <motion.a
             key={index}
             href={project.href}
-            target="_blank"
+            target="_self"
             rel="noopener noreferrer"
             className="cursor-pointer group relative flex flex-col gap-6 p-3 rounded-xl transform transition duration-300 hover:scale-105"
             variants={projectVariants}
