@@ -30,34 +30,31 @@ const ContactDetails = () => {
         <div className="flex gap-4 border-r border-l py-[15px] px-[40px] justify-center items-center">
           <FontAwesomeIcon
             icon={faFacebook}
-            className="text-[#c1c1c1] text-sm hover:text-[#d54900]"
+            className=" text-sm text-[#d54900]"
           />
           <FontAwesomeIcon
             icon={faTwitter}
-            className="text-[#c1c1c1] text-sm hover:text-[#d54900]"
+            className=" text-sm text-[#d54900]"
           />
           <FontAwesomeIcon
             icon={faLinkedinIn}
-            className="text-[#c1c1c1] text-sm hover:text-[#d54900]"
+            className=" text-sm text-[#d54900]"
           />
         </div>
         <div className="flex items-center justify-center gap-3 border-r border-l py-[15px] px-[40px] text-center">
-          <FontAwesomeIcon
-            icon={faClock}
-            className="text-[#c1c1c1] text-sm hover:text-[#d54900]"
-          />
-          <span className="text-[#c1c1c1] text-sm hover:text-[#d54900]">
+          <FontAwesomeIcon icon={faClock} className=" text-sm text-[#d54900]" />
+          <span className=" text-sm text-[#d54900]">
             Mon - Sat: 7:00 - 17:00
           </span>
         </div>
         <div className="flex items-center justify-center gap-3 border-r border-l py-[15px] px-[40px] text-center">
-          <span className="text-[#c1c1c1] text-sm hover:text-[#d54900]">
+          <span className=" text-sm text-[#d54900]">
             <FontAwesomeIcon icon={faWhatsapp} /> +234-8060-933-719,{' '}
             <FontAwesomeIcon icon={faPhone} /> +234-8035-080-136
           </span>
         </div>
         <div className="flex items-center justify-center gap-3 border-r border-l py-[15px] px-[40px]">
-          <span className="text-[#c1c1c1] text-sm text-center hover:text-[#d54900]">
+          <span className=" text-sm text-center text-[#d54900]">
             <FontAwesomeIcon icon={faEnvelope} /> gmail@goes-here.com
           </span>
         </div>

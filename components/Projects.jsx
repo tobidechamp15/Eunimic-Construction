@@ -84,8 +84,8 @@ const Projects = () => {
             onMouseOver={() => setHoveredIndex(index)}
             onMouseOut={() => setHoveredIndex(null)}
           >
-            <section className="relative">
-              <div className="h-64 overflow-hidden rounded-lg hover:opacity-25">
+            <section className="relative flex justify-center items-center">
+              <div className="h-64 overflow-hidden rounded-lg hover:opacity-25 ">
                 <Image
                   src={project.src}
                   className="w-full h-full object-cover transition duration-300 transform group-hover:scale-110"
@@ -94,7 +94,7 @@ const Projects = () => {
               </div>
               {hoveredIndex === index && (
                 <div
-                  className="flex justify-center w-full items-center absolute top-1/2 transform -translate-y-1/2"
+                  className="flex justify-center  items-center absolute top-1/2 transform -translate-y-1/2"
                   onMouseOver={() => setHoveredIndex(index)}
                   onMouseOut={() => setHoveredIndex(null)}
                 >

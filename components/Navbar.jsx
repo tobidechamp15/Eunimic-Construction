@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="flex items-center justify-center">
         <Image src={logo} className="w-[50px]" alt="Logo" />
       </div>
-      <div className="hidden md:flex items-center gap-3 justify-center font-[Montserrat] font-medium text-black text-sm">
+      <div className="hidden md:flex items-center gap-3 justify-center font-[Montserrat] font-semibold text-black text-sm">
         <span>HOME</span>
         <span>ABOUT</span>
         <span>CONTACT</span>
