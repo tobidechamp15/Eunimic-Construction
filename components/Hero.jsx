@@ -26,7 +26,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className=" bg-cover bg-center text-white relative"
+      className=" bg-cover bg-center text-white relative min-h-[75vh] flex items-center justify-center "
       ref={ref}
       initial="hidden"
       animate={controls}
@@ -34,7 +34,7 @@ const Hero = () => {
     >
       <Image src={headerBg} className="absolute object-cover h-full w-full" />
       {/* <div className="overlay absolute inset-0 bg-black bg-opacity-50"></div> */}
-      <div className="container mx-auto px-6 py-20 flex flex-col items-center text-center relative ">
+      <div className="container mx-auto px-6 py-20 flex flex-col items-center text-center relative justify-center">
         <h1 className="text-[26px] md:text-6xl font-bold mb-4 transition-all duration-700 transform hover:scale-105">
           Building Dreams into Reality
         </h1>

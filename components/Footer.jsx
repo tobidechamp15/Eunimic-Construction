@@ -17,19 +17,17 @@ const Footer = () => {
         </div>
 
         <div className="w-full md:w-1/4 mb-6 md:mb-0">
-          <h3 className="text-xl font-bold mb-4">NAVIGATION</h3>
-          <ul>
+          <h3 className="text-xl font-bold mb-4 w-fit">NAVIGATION</h3>
+          <div className="w-fit flex flex-col">
             {[
               'Home',
+              'Services',
               'Projects',
-              'What we do',
-              'About us',
               'Blog',
-              'Shop',
               'Contact us',
-              'DARK DEMO',
+              'About us',
             ].map((item) => (
-              <li key={item} className="mb-2  ">
+              <span key={item} className="mb-2 w-fit ">
                 <Link
                   // href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
                   href="/"
@@ -37,9 +35,9 @@ const Footer = () => {
                 >
                   {item}
                 </Link>
-              </li>
+              </span>
             ))}
-          </ul>
+          </div>
         </div>
 
         <div className="w-full md:w-1/4 mb-6 md:mb-0">
