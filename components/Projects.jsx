@@ -36,13 +36,13 @@ const Projects = () => {
       name: 'Modern Building',
     },
     {
-      href: 'https://taskify-tobiloba.vercel.app/',
+      href: 'modern',
       src: corporateImg,
       alt: 'Taskify project screenshot',
       name: 'Corporate Concepts',
     },
     {
-      href: 'https://invoicexpress.netlify.app',
+      href: 'modern',
       src: interiorImg,
       alt: 'invoiceXpress project screenshot',
       name: 'Interior Concepts',
