@@ -1,4 +1,5 @@
 import ClientsSection from '@/components/ClientsSection';
+import Contact from '@/components/Contact';
 import ContactDetails from '@/components/ContactDetails';
 import Copyright from '@/components/Copyright';
 import Footer from '@/components/Footer';
@@ -16,6 +17,7 @@ export default function Home() {
       <Services />
       <Projects />
       <ClientsSection />
+      <Contact />
       <Footer />
       <Copyright />
     </section>
