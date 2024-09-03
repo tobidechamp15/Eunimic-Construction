@@ -18,27 +18,34 @@ export async function POST(request) {
 
     // Send mail with defined transport object
     let info = await transporter.sendMail({
-      from: 'localhost:3000 email', // sender address
+      from: '"Eunimic Construction" <contact@eunimic-construction.com>', // sender address
       to: 'tobidechamp15@gmail.com', // list of receivers
-      subject: 'New Contact Form Submission', // Subject line
+      replyTo: body.email, // User's email address for replies
+      subject: 'Message from Eunimic Construction Contact Form', // Subject line
       text: `
         Name: ${body.name}
         Email: ${body.email}
         Message: ${body.message}
       `, // plain text body
       html: `
-         <div style="font-family: Arial, sans-serif; color: #333; background-color: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-<img src="/public/assets/eunimic.png">         <h2 style="color: #d35400; text-align: center; border-bottom: 2px solid #d35400; padding-bottom: 10px;">
-          Eunimic Construction</h2>
-          <p style="font-size: 16px; color: #333;">You have received a new message from your website contact form:</p>
-          <div style="background-color: #ffffff; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
-            <p><strong style="color: #d35400;">Name:</strong> ${body.name}</p>
-            <p><strong style="color: #d35400;">Email:</strong> ${body.email}</p>
-            <p><strong style="color: #d35400;">Subject:</strong> ${body.subject}</p>
-            <p><strong style="color: #d35400;">Message:</strong></p>
-            <p style="background-color: #f4f4f4; padding: 15px; border-radius: 5px; color: #333; border: 1px solid #ddd;">${body.message}</p>
+        <div style="font-family: Arial, sans-serif; color: #333; background-color: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 20px;">
+            <img src="https://eunimic-construction.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Feunimic.bca72dc9.png&w=640&q=75" alt="Eunimic Construction Logo" style="width: 100px;">
+            <h2 style="color: #d35400; text-align: center; flex-grow: 1; margin-left: 20px; border-bottom: 2px solid #d35400; padding-bottom: 10px;">Eunimic Constructions</h2>
           </div>
-          <p style="font-size: 14px; color: #777; margin-top: 20px;">This email was sent automatically from the NEunimic Construction website.</p>
+          <p style="font-size: 16px; color: #333; margin-bottom: 20px;">You have received a new message from your website contact form:</p>
+          <div style="background-color: #ffffff; padding: 20px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px;">
+            <div style="margin-bottom: 20px;">
+              <h3 style="font-size: 18px; color: #d35400; margin-bottom: 10px;">Sender Details:</h3>
+              <p><strong style="color: #d35400;">Name:</strong> ${body.name}</p>
+              <p><strong style="color: #d35400;">Email:</strong> ${body.email}</p>
+            </div>
+            <div style="margin-bottom: 20px;">
+              <h3 style="font-size: 18px; color: #d35400; margin-bottom: 10px;">Message:</h3>
+              <p style="background-color: #f4f4f4; padding: 15px; border-radius: 5px; color: #333; border: 1px solid #ddd;">${body.message}</p>
+            </div>
+          </div>
+          <p style="font-size: 14px; color: #777; text-align: center; margin-top: 20px;">This email was sent automatically from the Eunimic Construction website. Please do not reply to this email.</p>
         </div>
       `, // html body
     });
