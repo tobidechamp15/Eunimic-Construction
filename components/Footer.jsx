@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../public/assets/eunimic.jpeg';
+import logo from '../public/assets/eunimic.png';
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="md:container mx-auto px-4 flex flex-wrap justify-between">
         <div className="w-full md:w-1/4 mb-6 md:mb-0">
           <h3 className="text-xl font-bold mb-4">ABOUT US</h3>
-          <Image src={logo} />
+          <Image src={logo} className="w-[100px]" />
           <p className="text-gray-400 text-sm py-2">
             Excellence in Construction since 1985. We specialize in innovative
             building solutions, sustainable design, and precision engineering.
