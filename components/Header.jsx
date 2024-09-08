@@ -10,7 +10,7 @@ import {
 import { faClock, faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faArrowUp, faPhone } from '@fortawesome/free-solid-svg-icons';
 
-const ContactDetails = () => {
+const Header = () => {
   const [inView, setInView] = useState(false);
 
   // Toggle visibility
@@ -72,4 +72,4 @@ const ContactDetails = () => {
   );
 };
 
-export default ContactDetails;
+export default Header;

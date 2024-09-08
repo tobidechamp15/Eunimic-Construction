@@ -1,9 +1,35 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const ClientsSection = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.2, // Adjust this value to determine how much of the element should be in view before the animation starts
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+  const heroVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
+
   return (
-    <section className="py-16 text-center flex flex-col container">
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={heroVariants}
+      className="py-16 text-center flex flex-col container"
+    >
       <h2 className="text-3xl xsm:text-lg font-bold mb-12">
         CLIENTS THAT TRUST US
       </h2>
@@ -71,7 +97,7 @@ const ClientsSection = () => {
           margin-right: 4px;
         }
       `}</style>
-    </section>
+    </motion.div>
   );
 };
 

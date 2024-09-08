@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="container-fluid bg-white shadow-sm py-2 flex justify-between xsm:px-4  md:px-[50px] items-center sticky top-0 z-10">
+    <div className=" bg-white shadow-sm py-2 flex justify-between xsm:px-4  md:px-[50px] items-center sticky top-0 z-10">
       <Sidebar isOpen={isOpen} handleSideBar={handleSideBar} />
       <div className="flex items-center justify-center">
         <Image src={logo} className="w-[50px]" alt="Logo" />

@@ -1,7 +1,27 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.2, // Adjust this value to determine how much of the element should be in view before the animation starts
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+  const heroVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -34,7 +54,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <motion.div
+      className="container mx-auto p-4"
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={heroVariants}
+    >
       <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
       {success && (
         <p className="text-green-500 mb-4">Your message has been sent!</p>
@@ -88,7 +114,7 @@ const Contact = () => {
           Send Message
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,6 +1,6 @@
 import ClientsSection from '@/components/ClientsSection';
 import Contact from '@/components/Contact';
-import ContactDetails from '@/components/ContactDetails';
+import Header from '@/components/Header';
 import Copyright from '@/components/Copyright';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
@@ -11,7 +11,7 @@ import Services from '@/components/Services';
 export default function Home() {
   return (
     <section className="">
-      <ContactDetails />
+      <Header />
       <Navbar />
       <Hero />
       <Services />
